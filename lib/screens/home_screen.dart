@@ -44,6 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
  Future<void> _checkWelcomePopup() async {
   final shown = await SharedPref.isWelcomeShown();
 
+  debugPrint("Welcome popup shown: $shown");
+
   if (!shown) {
     await showWelcomeDialog(context);
 
@@ -340,6 +342,7 @@ Future<void> showWelcomeDialog(BuildContext context) async {
   barrierDismissible: false,
   builder: (_) {
     return Dialog(
+      backgroundColor: AppColors.background,
       insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),

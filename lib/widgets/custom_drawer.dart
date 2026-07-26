@@ -5,6 +5,7 @@ import 'package:leado/screens/qr/qr_code_scanner.dart';
 import 'package:leado/screens/scanned_leads_screen.dart';
 import 'package:leado/screens/show_info/show_info_screen.dart';
 import 'package:leado/utils/shared_pref.dart';
+import 'package:leado/utils/app_colors.dart';
 
 class CustomDrawer extends StatelessWidget {
   final int selectedIndex;
@@ -235,6 +236,7 @@ class CustomDrawer extends StatelessWidget {
     barrierDismissible: false,
     builder: (context) {
       return AlertDialog(
+        backgroundColor: AppColors.background,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
@@ -272,7 +274,7 @@ class CustomDrawer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            child: const Text("Cancel"),
+            child: Text("Cancel", style: TextStyle(color: AppColors.title)),
           ),
           ElevatedButton(
             onPressed: () async {

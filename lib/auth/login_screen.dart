@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:leado/model/exhibitor_response.dart';
 import 'package:leado/model/login_page_model.dart';
 import 'package:leado/screens/home_screen.dart';
+import 'package:leado/utils/app_colors.dart';
 import 'package:leado/utils/shared_pref.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -151,6 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               DropdownButtonFormField<ShowModel>(
                               value: selectedShowModel,
                               isExpanded: true,
+                              dropdownColor: AppColors.background,
                               decoration: InputDecoration(
                                 contentPadding: const EdgeInsets.symmetric(
                                   horizontal: 10,
